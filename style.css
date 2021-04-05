@@ -1,0 +1,574 @@
+:root {
+    --orange: #fb6e14;
+}
+
+/* Global styles */
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    font-family: "Merriweather", serif;
+}
+
+.page-container {
+    width: 100%;
+    margin: auto;
+}
+
+section {
+    width: 100%;
+}
+
+/* Navbar */
+#navbar {
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    line-height: 70px;
+    box-sizing: border-box;
+    outline-offset: -5px;   
+    z-index: 10;
+}
+
+#navbar-left {
+    width: 100%;
+    text-align: center;
+}
+
+#navbar a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navbar .oversection {
+     color: palevioletred;
+}
+.sticky + .page-container {
+    padding-top: 70px;
+}
+
+/* Header */
+header {
+    height: 600px;
+}
+
+.header-slider::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.header-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    overflow: hidden;   
+    background: url("img/tlo1.jpg") no-repeat center;
+    background-size: cover;
+    animation: slide 20s infinite 4s;
+    transition: slide 0.5s ease-in-out;
+}
+
+#f1 {
+    margin: 0;
+}
+
+#foodee-header {
+    position: absolute;
+    text-align: center;
+    font-size: 3.5em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+}
+#foodee-header h1{
+    font-size: 3em;
+}
+
+@keyframes slide {
+    25% {
+        background-image: url(img/tlo3.jpg)
+    }
+    50% {
+        background-image: url(img/tlo5.jpg)
+    }
+    75% {
+        background-image: url(img/tlo1.jpg)
+    }
+}
+
+
+/* About Section */
+.flex-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.one-of-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    position: relative;
+}
+
+#left {
+    overflow: hidden;
+}
+
+#right {
+    background-image: url("img/tloomnie.jpg");
+}
+
+#about-header h2 {
+    
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin: 30px 0 20px 0;
+    color: #f2f2f2;
+    opacity: 0;
+    position: relative;
+}
+
+#about-content {
+    padding: 0 100px;
+    font-size: 18px;
+    color: #efeefe;
+    text-align: justify;
+    position: relative;
+    opacity: 0;
+}
+.first-letter {
+   
+    float: left;
+    color: #f2f2f2;
+    font-size: 60px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+#get-in-touch {
+    background-color: transparent;
+    border: 2px solid palevioletred;
+    border-radius: 10px;
+    color: #f2f2f2;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+    opacity: 0;
+    position: relative;
+}
+
+#get-in-touch:hover {
+    background-color:palevioletred;
+}
+
+/*oferta*/
+
+#bg {
+    width: 100%;
+    height: 100%;
+    background: url("img/tlo2.jpg");
+    position: static;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+}
+#offer-wrapper {
+height: 100%;
+padding-top: 100px;
+padding-bottom: 100px;
+}
+
+#offer-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: show-all 0.925s ease-in-out 0.925s forwards;
+    opacity: 0;
+    display: grid;
+    grid-template-areas: "offer1 offer2 offer3 offer4";    
+}
+.offer-box {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.offerbox1 {
+    grid-area: offer1;
+}
+
+.offerbox2 {
+    grid-area: offer2;
+}
+.offerbox3 {
+    grid-area: offer3;
+}
+.offerbox4 {
+    grid-area: offer4;
+}
+#offer-header {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.offer-box-header {
+    text-align: center;
+    padding-bottom: 20px;
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+.offer-box-item {
+    text-align: center;
+    font-size: 1.2em;
+}
+.parallax{
+    height: 100%;
+}
+.type{
+    margin: 15px;
+}
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+
+/* Menu section */
+#menu-section {
+    height: auto;
+    padding-bottom: 100px;
+}
+
+@keyframes show-all {
+    /* Nowe */
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#menu-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#menu-topbar {
+    min-height: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: show-all 0.7s ease-in-out 0.7s forwards;
+    opacity: 0;
+}
+
+#menu-header {
+    width: 70%;
+    margin-top: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+#menu-header hr {
+    width: 40px;
+    height: 0.8px;
+    color: palevioletred;
+    background-color: palevioletred;
+}
+
+#menu-header p {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(157, 143, 143);
+
+}
+
+#menu-content {
+    animation: show-all 0.925s ease-in-out 0.925s forwards;
+    opacity: 0;
+    display: grid;
+    grid-template-areas: "foodbox1 foodbox2"
+
+}
+
+.foodbox1 {
+    grid-area: foodbox1;
+}
+
+.foodbox2 {
+    grid-area: foodbox2;
+}
+
+.food-box {
+    padding-left: 20px;
+}
+
+.food-box-header {
+    margin-top: 50px;
+    position: relative;
+    min-height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.food-box-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    min-height: 50px;
+    border-bottom: 1px dotted #b6ae9f;
+    padding-bottom: 5px;
+    font-family: "Merriweather", serif;
+}
+
+.item-details {
+    display: block;
+    padding-bottom: 10px;
+    margin-left: 5px;
+}
+
+
+.item-details h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.item-price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    color: palevioletred;
+}
+
+/*galeria*/
+#gallery-section {
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    padding-top: 50px;
+}
+#portfolio {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;  
+}
+
+#portfolio-header {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.posty {
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "prev slide next" "post post post"
+}
+
+.slide {
+    grid-area: slide;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#slide {
+    width: 100%;
+}
+
+.next {
+    grid-area: next;
+}
+
+.prev {
+    grid-area: prev;
+    visibility: hidden;
+}
+
+.post-content {
+    grid-area: post;
+    padding: 1em;
+    text-align: justify;
+}
+
+.button {
+    cursor: pointer;
+    font-size: 1.75em;
+    color: var(--violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    color: var(--pink);
+}
+#contact-wrapper {
+    background-color: pink;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#contact-content {
+    animation: show-all 0.925s ease-in-out 0.925s forwards;
+    opacity: 0;
+    display: grid;
+    grid-template-areas: "contactbox1 contactbox2"
+}
+
+#contact-header {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact {
+    text-align: center;
+    padding: 5px;
+}
+
+.contactbox1 {
+    grid-area: contactbox1;
+    font-size: 20px;
+}
+
+.contactbox2 {
+    grid-area: contactbox2;
+}
+
+/* media queries */
+@media only screen and (max-width: 1000px) {
+    #menu-content {
+        display: grid;
+        grid-template-areas: "foodbox1" "foodbox2" "foodbox3" "foodbox4"
+    }
+
+    header {
+        height: 400px;
+    }
+
+    .header-slider::before {
+        height: 400px;
+    }
+
+    #foodee-header {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #menu-header h1 {
+        font-size: 36px;
+    }
+
+    #menu-header p {
+        font-size: 16px;
+    }
+
+    .food-box-header h2 {
+        font-size: 26px;
+    }
+
+    .item-details h3 {
+        font-size: 14px;
+    }
+
+    .item-details p {
+        font-size: 12px;
+    }
+
+    .item-price {
+        font-size: 16px;
+    }
+
+    header {
+        height: 300px;
+    }
+
+    .header-slider::before {
+        height: 300px;
+    }
+
+    #foodee-header {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 1050px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .one-of-two {
+        width: 100%;
+    }
+
+    .one-of-two #right {
+        margin: 100px 0;
+    }
+
+    #about-img {
+        width: 100%;
+    }
+
+    #about-content {
+        font-size: 16px;
+        padding: 0 50px;
+    }
+
+    #about-header h2 {
+        font-size: 35px;
+    }
+}
