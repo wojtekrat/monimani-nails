@@ -1,11 +1,16 @@
 [
     {
         "id": "1",
-        "text": "asdadsasdadssdasdasdasasdfsdfsadfasdfsadfasdfsadfasdf sdfasdf sd sdfsadfsdfsdf sdfdffdfsfas gnksdnfksdfn sdnksdnfakdnfksdnfk"
+        "text": "Przykładowa stylizacja nr 1"
     },
 {
     "id": "2",
-    "text": "asdadsasdadssdasdasdasasdfsdfsadfasdfsadfasdfsadfasdf sdfasdf sd sdfsadfsdfsdf sdfdffdfsfas gnksdnfksdfn sdnksdnfakdnfksdnfk"
-}
+    "text": "Przykładowa stylizacja nr 2"
+},
+    {
+        "id": "3",
+        "text": "Przykładowa stylizacja nr 3"
+    }
+    
 
 ]
