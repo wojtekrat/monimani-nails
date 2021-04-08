@@ -1,6 +1,6 @@
 
-var footerY = $('footer').offset().top;
-var aboutY = $('#right').offset().top;
+var footerY = $('#contact-wrapper').offset().top;
+var aboutY = $('#about-wrapper').offset().top;
 //Navbar
 $(document).ready(function () {
     var nav = $("#navbar");
@@ -17,7 +17,7 @@ $(document).ready(function () {
     };
 
     function navHighlight(navi, sec) {
-        var pos = $(sec).offset().top - 85;
+        var pos = $(sec).offset().top - 100;
         var tit = $(navi);
         var over = "oversection";
         if ($(this).scrollTop() > pos && $(this).scrollTop() < (pos + $(sec).height())) {
@@ -29,22 +29,15 @@ $(document).ready(function () {
     };
     $(window).scroll(function () {
         checkPos();
-        navHighlight('#home', '#about-section');
-        navHighlight('#offer', '#features-section');
+        navHighlight('#home', '#about-topbar');
         navHighlight('#gallery', '#gallery-section');
         navHighlight('#prices', '#menu-section');
-        navHighlight('#contact', '#contact-wrapper');
+        navHighlight('#contact', '#contact-section');
     });
     checkPos();
     $("#home").click(function () {
         $('html, body').animate({
-            scrollTop: $("#about-section").offset().top
-        }, 500);
-    });
-
-    $("#offer").click(function () {
-        $('html, body').animate({
-            scrollTop: $("#features-section").offset().top - 70
+            scrollTop: $("#about-topbar").offset().top
         }, 500);
     });
 
@@ -62,7 +55,7 @@ $(document).ready(function () {
 
     $("#contact").click(function () {
         $('html, body').animate({
-            scrollTop: $("#reservation-section").offset().top - 70
+            scrollTop: $("#contact-wrapper").offset().top - 70
         }, 500);
     });
 });
@@ -83,15 +76,11 @@ $("document").ready(function () {
         var scrollY = $(window).scrollTop() + 650;
         console.log("scroll " + scrollY);
         if (scrollY > aboutY) {
-            $('#about-header h2').animate({
+            $('.menu-header').animate({
                 opacity: "1",
                 bottom: "10px"
             }, 500);
             $('#about-content').delay(200).animate({
-                opacity: "1",
-                bottom: "10px"
-            }, 500);
-            $('#get-in-touch').delay(400).animate({
                 opacity: "1",
                 bottom: "10px"
             }, 500);
@@ -150,7 +139,7 @@ prev.addEventListener("click", function() {
 function generatePost(pageCounter) {
     var numero = pageCounter - 1;
     var ourRequest = new XMLHttpRequest();
-    ourRequest.open('GET', 'https://raw.githubusercontent.com/wojtekrat/monimani/master/posty.json');
+    ourRequest.open('GET', 'https://raw.githubusercontent.com/wojtekrat/monimani-nails/main/posty.json');
     ourRequest.onload = function() {
         var ourData = JSON.parse(ourRequest.responseText);
         clearContent();
